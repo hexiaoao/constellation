@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/main_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/lightyellow"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/pink"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightyellow"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RadioButton
+            android:id="@+id/main_rb_star"
+            style="@style/main_rb"
+            android:checked="false"
+            android:drawableTop="@drawable/main_rb_star"
+            android:text="@string/label_star" />
+
+        <RadioButton
+            android:id="@+id/main_rb_partner"
+            style="@style/main_rb"
+            android:drawableTop="@drawable/main_rb_partner"
+            android:text="@string/label_partner" />
+
+        <RadioButton
+            android:id="@+id/main_rb_luck"
+            style="@style/main_rb"
+            android:drawableTop="@drawable/main_rb_luck"
+            android:text="@string/label_luck" />
+
+        <RadioButton
+            android:id="@+id/main_rb_me"
+            style="@style/main_rb"
+            android:drawableTop="@drawable/main_rb_me"
+            android:text="@string/label_me" />
+
+    </RadioGroup>
+    <!--中间使用布局占位，用Fragment替换布局-->
+    <LinearLayout
+        android:id="@+id/main_layout_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/main_tv_title"
+        android:layout_above="@+id/main_rg">
+
+    </LinearLayout>
+</RelativeLayout>
